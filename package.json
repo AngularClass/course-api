@@ -1,6 +1,6 @@
 {
   "name": "@angularclass/api",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "gram"
   ],
   "bin": {
-    "angularclass-server": "index.js"
+    "angularclass-server": "./index.js"
   },
   "dependencies": {
     "body-parser": "^1.15.1",
