@@ -11,6 +11,9 @@
   "files": [
     "gram"
   ],
+  "bin": {
+    "angularclass-server": "index.js"
+  },
   "dependencies": {
     "body-parser": "^1.15.1",
     "cookie-session": "^2.0.0-alpha.1",
@@ -21,6 +24,7 @@
     "lodash": "^4.13.1",
     "lowdb": "^0.13.1",
     "morgan": "^1.7.0",
+    "nodemon": "^1.9.2",
     "uuid": "^2.0.2",
     "yargs": "^4.7.1"
   }
