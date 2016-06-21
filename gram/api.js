@@ -12,36 +12,41 @@ router.use(jwt({secret: 'CookieMunster'})
 
 router.post('/signup', function(req, res, next) {
   const creds = req.body;
+
   const user = DB.get('users')
-                .find({username: creds.username})
+                .find({email: creds.email})
                 .value();
 
   if (user) {
-    next(new Error('That username is taken'))
+    next(new Error('That email is taken'))
   } else {
     const signedin = DB.get('users')
-      .push(_.merge(creds, helpers.getDefaultUser()))
-      .find({username: creds.username})
+      .push(_.merge(helpers.getDefaultUser(), {password: creds.password, email: creds.email}))
+      .find({email: creds.email})
       .value();
 
-    res.json({token: helpers.createJWT(signedin)});
+    res.json({token: helpers.createJWT({id: signedin.id, email: signedin.email})});
   }
 });
 
 router.post('/signin', function(req, res) {
   const creds = req.body;
   const user = DB.get('users')
-                .find({username: creds.username, password: creds.password})
+                .find({email: creds.email, password: creds.password})
                 .value();
   if (!user) {
     res.sendStatus(401);
   } else {
-    res.json({token: helpers.createJWT(user)});
+    res.json({token: helpers.createJWT({id: user.id, email: user.email})});
   }
 });
 
 router.get('/me', function(req, res) {
-  res.json(req.session.user);
+  const user = DB.get('users')
+                .find({email: req.user.email, id: req.user.id})
+                .value();
+
+  res.json(user || {});
 });
 
 router.route('/posts')

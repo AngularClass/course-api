@@ -4,7 +4,7 @@ module.exports = function() {
     if (err.name === 'UnauthorizedError') {
       res.status(401).send('Unauthorized, check JWT')
     } else {
-      res.status(err.message);;
+      res.send(err.message);;
     }
   }
 };
