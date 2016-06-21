@@ -42,11 +42,17 @@ router.post('/signin', function(req, res) {
 });
 
 router.get('/me', function(req, res) {
-  const user = DB.get('users')
+  let user = DB.get('users')
                 .find({email: req.user.email, id: req.user.id})
                 .value();
 
-  res.json(user || {});
+  if (!user) {
+    res.status(401).send('Unauthorized');
+    return;
+  }
+  user = _.merge({}, user);
+  delete user.password;
+  res.json(user);
 });
 
 router.route('/posts')
