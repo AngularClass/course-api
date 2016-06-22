@@ -7,37 +7,53 @@ const helpers = require('./helper');
 const DB = require('./db');
 
 router.use(jwt({secret: 'CookieMunster'})
-           .unless({path: [{ url: '/api/signin', method: 'POST' }, { url: '/api/signup', method: 'POST' }]})
+           .unless({
+             path: [
+               { url: '/api/signin', method: 'POST' },
+               { url: '/api/signup', method: 'POST' },
+               { url: '/api/posts', method: 'GET' },
+               // https://regex101.com/r/uZ2mG6/1
+               { url: /\/api\/users\/.*/, method: 'GET' },
+             ]})
 );
 
 router.post('/signup', function(req, res, next) {
   const creds = req.body;
 
   const user = DB.get('users')
-                .find({email: creds.email})
+                .find(user => {
+                  return user.username === creds.username ||
+                    user.email === creds.email;
+                })
                 .value();
 
   if (user) {
-    next(new Error('That email is taken'))
+    next(new Error('That email or username is taken'))
   } else {
     const signedin = DB.get('users')
-      .push(_.merge(helpers.getDefaultUser(), {password: creds.password, email: creds.email}))
+      .push(_.merge(helpers.getDefaultUser(), creds))
       .find({email: creds.email})
       .value();
 
-    res.json({token: helpers.createJWT({id: signedin.id, email: signedin.email})});
+    res.json({
+      token: helpers.createJWT({id: signedin.id, email: signedin.email}),
+      user: signedin
+    });
   }
 });
 
 router.post('/signin', function(req, res) {
   const creds = req.body;
   const user = DB.get('users')
-                .find({email: creds.email, password: creds.password})
+                .find(creds)
                 .value();
   if (!user) {
     res.sendStatus(401);
   } else {
-    res.json({token: helpers.createJWT({id: user.id, email: user.email})});
+    res.json({
+      user,
+      token: helpers.createJWT({id: user.id, email: user.email}),
+    });
   }
 });
 
