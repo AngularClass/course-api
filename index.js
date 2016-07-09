@@ -6,5 +6,5 @@ if (!args.api) {
   console.log('Must provide an api');
   process.exit(1);
 } else {
-  require('./' + args.api);
+  require('./' + args.api + '/src');
 }
