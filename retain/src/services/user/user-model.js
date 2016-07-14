@@ -6,6 +6,7 @@
 // for more of what you can do here.
 
 const Sequelize = require('sequelize');
+const args = require('yargs').argv;
 
 module.exports = function(app) {
   const user = app.get('sequelize').define('users', {
@@ -23,7 +24,7 @@ module.exports = function(app) {
     classMethods: {
       associate() {
         const models = app.get('models');
-        user.hasMany(models.notes);
+        args.auth && user.hasMany(models.notes);
       }
     }
   });

@@ -3,6 +3,7 @@
 const service = require('feathers-sequelize');
 const note = require('./note-model');
 const hooks = require('./hooks');
+const args = require('yargs').argv;
 
 module.exports = function(){
   const app = this;
@@ -22,8 +23,9 @@ module.exports = function(){
   const noteService = app.service('/notes');
 
   // Set up our before hooks
-  noteService.before(hooks.before);
-
+  if (args.auth) {
+    noteService.before(hooks.before);
+    noteService.after(hooks.after);
+  }
   // Set up our after hooks
-  noteService.after(hooks.after);
 };

@@ -11,7 +11,7 @@ exports.before = {
     auth.restrictToAuthenticated()
   ],
   find: [
-     auth.queryWithCurrentUser({ idField: 'id', as: 'userId' })
+    auth.queryWithCurrentUser({ idField: 'id', as: 'userId' })
   ],
   get: [
     auth.restrictToOwner({ idField: 'id', ownerField: 'userId' })
