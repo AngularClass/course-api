@@ -1,0 +1,13 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "sqlite": "../data/retain.sqlite",
+  "public": "../public/",
+  "auth": {
+    "idField": "id",
+    "token": {
+      "secret": "tA1yRUhJvK1xlPVsSy3naI7tbN9aP2GqyCDWvgcj1kHVYb76wynjwUwYdhtB5iN9ayklrPuo67SMlN9GMJVCCA=="
+    },
+    "local": {}
+  }
+}
