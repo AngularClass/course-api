@@ -24,7 +24,9 @@ module.exports = function(app) {
     classMethods: {
       associate() {
         const models = app.get('models');
-        args.auth && user.hasMany(models.notes);
+        if (args.auth) {
+          user.hasMany(models.notes);
+        }
       }
     }
   });
