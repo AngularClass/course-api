@@ -16,6 +16,7 @@
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
     "cors": "^2.7.1",
+    "express": "^4.14.0",
     "feathers": "^2.0.1",
     "feathers-authentication": "^0.7.9",
     "feathers-configuration": "^0.2.3",
@@ -36,5 +37,9 @@
     "jshint": "^2.9.2",
     "mocha": "^2.5.3",
     "request": "^2.72.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angularclass/course-api.git"
   }
 }
