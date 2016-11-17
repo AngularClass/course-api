@@ -11,7 +11,6 @@ router.route('/payments')
 
 router.get('/payments/:payment', controller.getOnePayment)
 
-
 router.route('/users')
 .post(controller.createUser)
 .get(controller.getUser)
@@ -20,5 +19,4 @@ router.route('/users')
 
 router.get('/users/:user', controller.getOneUser)
 
-
-module.exports = router;
+module.exports = () => router

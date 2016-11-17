@@ -1,5 +1,5 @@
 const express = require('express')
-const { urlEncoded, json } = require('body-parser')
+const { urlencoded, json } = require('body-parser')
 const morgan = require('morgan')
 
 module.exports = function(app) {
