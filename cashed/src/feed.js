@@ -4,7 +4,6 @@ const getUser = function(db, notThisUser = 000000) {
   const size = db.get('users').size().value()
 
   if (size < 3) {
-    console.log('insert users')
     var mocks = [
       {
         username: 'GinaZaz',
@@ -75,8 +74,7 @@ module.exports = function(socket, db) {
     if (user1) {
       const user2 = getUser(db, user1.id)
       const transaction = createTransaction(db, user1, user2)
-      console.log(JSON.stringify(transaction, null, 2))
-      // socket.emit('transaction', transaction)
+      socket.emit('transaction', transaction)
     }
   }, 3300)
 }
