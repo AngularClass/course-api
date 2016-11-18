@@ -48,8 +48,11 @@ const getRandomReason = function() {
     'my share for the rent..',
     'just because',
     'yesterday was dope',
-    'Never had a Tesla pick me up as an Uber'
-  ][random(0, 5)]
+    'Never had a Tesla pick me up as an Uber',
+    'Don\'t forget to get the right size this time!',
+    'just returning the favor',
+    'I can\'t beleive I lost that bet, here ya go'
+  ][random(0, 7)]
 }
 
 const createTransaction = function(db, user1, user2) {
@@ -58,7 +61,7 @@ const createTransaction = function(db, user1, user2) {
     toId: user2.id,
     from: user1,
     to: user2,
-    amount: random(10.1, 2499.99),
+    amount: random(10, 1300),
     createdAt: new Date(),
     reason: getRandomReason()
   }
@@ -69,6 +72,7 @@ const createTransaction = function(db, user1, user2) {
 }
 
 module.exports = function(socket, db) {
+  db.set('payments', []).value()
   setInterval(() => {
     const user1 = getUser(db)
     if (user1) {
