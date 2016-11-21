@@ -7,25 +7,25 @@ const getUser = function(db, notThisUser = 000000) {
     var mocks = [
       {
         username: 'GinaZaz',
-        avatar: '',
+        avatar: 'https://api.adorable.io/avatars/250/yo',
         city: 'Atlanta',
         state: 'GA'
       },
       {
         username: 'TyDolla',
-        avatar: '',
+        avatar: 'https://api.adorable.io/avatars/250/mean',
         city: 'LA',
         state: 'CA'
       },
       {
         username: 'yellyT',
-        avatar: '',
+        avatar: 'https://api.adorable.io/avatars/250/happy',
         city: 'NY',
         state: 'NY'
       },
       {
         username: 'tj_hustle',
-        avatar: '',
+        avatar: 'https://api.adorable.io/avatars/250/extra',
         city: 'Chicago',
         state: 'IL'
       }
