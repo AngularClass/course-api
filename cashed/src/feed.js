@@ -73,7 +73,6 @@ const createTransaction = function(db, user1, user2) {
 }
 
 module.exports = function(socket, db) {
-  db.set('payments', []).value()
   setInterval(() => {
     const user1 = getUser(db)
     if (user1) {

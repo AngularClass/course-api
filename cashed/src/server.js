@@ -8,6 +8,7 @@ const middleware = require('./middleware')
 const createFeed = require('./feed')
 
 const jsonRouter = jsonServer.router(path.join(__dirname, 'db.json'))
+jsonRouter.db.set('payments', []).value()
 
 middleware(app)
 
