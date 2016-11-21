@@ -5,10 +5,10 @@ const io = require('socket.io')(server)
 const jsonServer = require('json-server')
 const path = require('path')
 const middleware = require('./middleware')
-const createFeed = require('./feed')
+const feed = require('./feed')
+const args = require('yargs').argv;
 
 const jsonRouter = jsonServer.router(path.join(__dirname, 'db.json'))
-jsonRouter.db.set('payments', []).value()
 
 middleware(app)
 
@@ -18,9 +18,12 @@ app.use((req, res, next)=> {
 })
 app.use('/api', jsonRouter)
 
+args.seed && feed.seed(jsonRouter.db)
+
 io.on('connection', socket => {
-  createFeed(socket, jsonRouter.db)
+  args.realtime && feed.realtime(socket, jsonRouter.db)
 })
+
 
 module.exports = server
 

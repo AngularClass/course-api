@@ -72,13 +72,28 @@ const createTransaction = function(db, user1, user2) {
   .value()
 }
 
-module.exports = function(socket, db) {
-  setInterval(() => {
-    const user1 = getUser(db)
-    if (user1) {
-      const user2 = getUser(db, user1.id)
-      const transaction = createTransaction(db, user1, user2)
-      socket.emit('transaction', transaction)
-    }
-  }, 3300)
+module.exports = {
+  realtime(socket, db) {
+    setInterval(() => {
+      const user1 = getUser(db)
+      if (user1) {
+        const user2 = getUser(db, user1.id)
+        const transaction = createTransaction(db, user1, user2)
+        socket.emit('transaction', transaction)
+      }
+    }, 3300)
+  },
+
+  seed(db) {
+    db.set('users', []).value()
+    db.set('payments', []).value()
+
+    Array(30).fill(1)
+    .forEach(() => {
+      const user = getUser(db)
+      const user2 = getUser(db, user.id)
+      createTransaction(db, user, user2)
+    })
+    console.log('seeded DB')
+  }
 }

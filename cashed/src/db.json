@@ -1,4 +1,694 @@
 {
-  "users": [],
-  "payments": []
+  "users": [
+    {
+      "username": "GinaZaz",
+      "avatar": "https://api.adorable.io/avatars/250/yo",
+      "city": "Atlanta",
+      "state": "GA",
+      "id": 1
+    },
+    {
+      "username": "TyDolla",
+      "avatar": "https://api.adorable.io/avatars/250/mean",
+      "city": "LA",
+      "state": "CA",
+      "id": 2
+    },
+    {
+      "username": "yellyT",
+      "avatar": "https://api.adorable.io/avatars/250/happy",
+      "city": "NY",
+      "state": "NY",
+      "id": 3
+    },
+    {
+      "username": "tj_hustle",
+      "avatar": "https://api.adorable.io/avatars/250/extra",
+      "city": "Chicago",
+      "state": "IL",
+      "id": 4
+    }
+  ],
+  "payments": [
+    {
+      "fromId": 3,
+      "toId": 1,
+      "from": {
+        "username": "yellyT",
+        "avatar": "https://api.adorable.io/avatars/250/happy",
+        "city": "NY",
+        "state": "NY",
+        "id": 3
+      },
+      "to": {
+        "username": "GinaZaz",
+        "avatar": "https://api.adorable.io/avatars/250/yo",
+        "city": "Atlanta",
+        "state": "GA",
+        "id": 1
+      },
+      "amount": 724,
+      "createdAt": "2016-11-21T17:35:47.286Z",
+      "reason": "Don't forget to get the right size this time!",
+      "id": 1
+    },
+    {
+      "fromId": 2,
+      "toId": 1,
+      "from": {
+        "username": "TyDolla",
+        "avatar": "https://api.adorable.io/avatars/250/mean",
+        "city": "LA",
+        "state": "CA",
+        "id": 2
+      },
+      "to": {
+        "username": "GinaZaz",
+        "avatar": "https://api.adorable.io/avatars/250/yo",
+        "city": "Atlanta",
+        "state": "GA",
+        "id": 1
+      },
+      "amount": 177,
+      "createdAt": "2016-11-21T17:35:47.287Z",
+      "reason": "just because",
+      "id": 2
+    },
+    {
+      "fromId": 3,
+      "toId": 4,
+      "from": {
+        "username": "yellyT",
+        "avatar": "https://api.adorable.io/avatars/250/happy",
+        "city": "NY",
+        "state": "NY",
+        "id": 3
+      },
+      "to": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "amount": 1143,
+      "createdAt": "2016-11-21T17:35:47.287Z",
+      "reason": "just because",
+      "id": 3
+    },
+    {
+      "fromId": 2,
+      "toId": 4,
+      "from": {
+        "username": "TyDolla",
+        "avatar": "https://api.adorable.io/avatars/250/mean",
+        "city": "LA",
+        "state": "CA",
+        "id": 2
+      },
+      "to": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "amount": 203,
+      "createdAt": "2016-11-21T17:35:47.287Z",
+      "reason": "just returning the favor",
+      "id": 4
+    },
+    {
+      "fromId": 4,
+      "toId": 2,
+      "from": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "to": {
+        "username": "TyDolla",
+        "avatar": "https://api.adorable.io/avatars/250/mean",
+        "city": "LA",
+        "state": "CA",
+        "id": 2
+      },
+      "amount": 743,
+      "createdAt": "2016-11-21T17:35:47.288Z",
+      "reason": "For the foods the other day",
+      "id": 5
+    },
+    {
+      "fromId": 4,
+      "toId": 1,
+      "from": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "to": {
+        "username": "GinaZaz",
+        "avatar": "https://api.adorable.io/avatars/250/yo",
+        "city": "Atlanta",
+        "state": "GA",
+        "id": 1
+      },
+      "amount": 716,
+      "createdAt": "2016-11-21T17:35:47.289Z",
+      "reason": "Don't forget to get the right size this time!",
+      "id": 6
+    },
+    {
+      "fromId": 4,
+      "toId": 2,
+      "from": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "to": {
+        "username": "TyDolla",
+        "avatar": "https://api.adorable.io/avatars/250/mean",
+        "city": "LA",
+        "state": "CA",
+        "id": 2
+      },
+      "amount": 275,
+      "createdAt": "2016-11-21T17:35:47.289Z",
+      "reason": "I can't beleive I lost that bet, here ya go",
+      "id": 7
+    },
+    {
+      "fromId": 4,
+      "toId": 1,
+      "from": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "to": {
+        "username": "GinaZaz",
+        "avatar": "https://api.adorable.io/avatars/250/yo",
+        "city": "Atlanta",
+        "state": "GA",
+        "id": 1
+      },
+      "amount": 756,
+      "createdAt": "2016-11-21T17:35:47.290Z",
+      "reason": "For the foods the other day",
+      "id": 8
+    },
+    {
+      "fromId": 4,
+      "toId": 1,
+      "from": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "to": {
+        "username": "GinaZaz",
+        "avatar": "https://api.adorable.io/avatars/250/yo",
+        "city": "Atlanta",
+        "state": "GA",
+        "id": 1
+      },
+      "amount": 911,
+      "createdAt": "2016-11-21T17:35:47.290Z",
+      "reason": "I can't beleive I lost that bet, here ya go",
+      "id": 9
+    },
+    {
+      "fromId": 4,
+      "toId": 3,
+      "from": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "to": {
+        "username": "yellyT",
+        "avatar": "https://api.adorable.io/avatars/250/happy",
+        "city": "NY",
+        "state": "NY",
+        "id": 3
+      },
+      "amount": 148,
+      "createdAt": "2016-11-21T17:35:47.293Z",
+      "reason": "For the foods the other day",
+      "id": 10
+    },
+    {
+      "fromId": 2,
+      "toId": 3,
+      "from": {
+        "username": "TyDolla",
+        "avatar": "https://api.adorable.io/avatars/250/mean",
+        "city": "LA",
+        "state": "CA",
+        "id": 2
+      },
+      "to": {
+        "username": "yellyT",
+        "avatar": "https://api.adorable.io/avatars/250/happy",
+        "city": "NY",
+        "state": "NY",
+        "id": 3
+      },
+      "amount": 975,
+      "createdAt": "2016-11-21T17:35:47.294Z",
+      "reason": "Never had a Tesla pick me up as an Uber",
+      "id": 11
+    },
+    {
+      "fromId": 1,
+      "toId": 2,
+      "from": {
+        "username": "GinaZaz",
+        "avatar": "https://api.adorable.io/avatars/250/yo",
+        "city": "Atlanta",
+        "state": "GA",
+        "id": 1
+      },
+      "to": {
+        "username": "TyDolla",
+        "avatar": "https://api.adorable.io/avatars/250/mean",
+        "city": "LA",
+        "state": "CA",
+        "id": 2
+      },
+      "amount": 693,
+      "createdAt": "2016-11-21T17:35:47.295Z",
+      "reason": "my share for the rent..",
+      "id": 12
+    },
+    {
+      "fromId": 4,
+      "toId": 3,
+      "from": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "to": {
+        "username": "yellyT",
+        "avatar": "https://api.adorable.io/avatars/250/happy",
+        "city": "NY",
+        "state": "NY",
+        "id": 3
+      },
+      "amount": 1074,
+      "createdAt": "2016-11-21T17:35:47.295Z",
+      "reason": "Don't forget to get the right size this time!",
+      "id": 13
+    },
+    {
+      "fromId": 4,
+      "toId": 3,
+      "from": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "to": {
+        "username": "yellyT",
+        "avatar": "https://api.adorable.io/avatars/250/happy",
+        "city": "NY",
+        "state": "NY",
+        "id": 3
+      },
+      "amount": 756,
+      "createdAt": "2016-11-21T17:35:47.296Z",
+      "reason": "Never had a Tesla pick me up as an Uber",
+      "id": 14
+    },
+    {
+      "fromId": 3,
+      "toId": 4,
+      "from": {
+        "username": "yellyT",
+        "avatar": "https://api.adorable.io/avatars/250/happy",
+        "city": "NY",
+        "state": "NY",
+        "id": 3
+      },
+      "to": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "amount": 624,
+      "createdAt": "2016-11-21T17:35:47.297Z",
+      "reason": "my share for the rent..",
+      "id": 15
+    },
+    {
+      "fromId": 2,
+      "toId": 3,
+      "from": {
+        "username": "TyDolla",
+        "avatar": "https://api.adorable.io/avatars/250/mean",
+        "city": "LA",
+        "state": "CA",
+        "id": 2
+      },
+      "to": {
+        "username": "yellyT",
+        "avatar": "https://api.adorable.io/avatars/250/happy",
+        "city": "NY",
+        "state": "NY",
+        "id": 3
+      },
+      "amount": 1102,
+      "createdAt": "2016-11-21T17:35:47.298Z",
+      "reason": "For the foods the other day",
+      "id": 16
+    },
+    {
+      "fromId": 1,
+      "toId": 2,
+      "from": {
+        "username": "GinaZaz",
+        "avatar": "https://api.adorable.io/avatars/250/yo",
+        "city": "Atlanta",
+        "state": "GA",
+        "id": 1
+      },
+      "to": {
+        "username": "TyDolla",
+        "avatar": "https://api.adorable.io/avatars/250/mean",
+        "city": "LA",
+        "state": "CA",
+        "id": 2
+      },
+      "amount": 200,
+      "createdAt": "2016-11-21T17:35:47.300Z",
+      "reason": "just returning the favor",
+      "id": 17
+    },
+    {
+      "fromId": 1,
+      "toId": 2,
+      "from": {
+        "username": "GinaZaz",
+        "avatar": "https://api.adorable.io/avatars/250/yo",
+        "city": "Atlanta",
+        "state": "GA",
+        "id": 1
+      },
+      "to": {
+        "username": "TyDolla",
+        "avatar": "https://api.adorable.io/avatars/250/mean",
+        "city": "LA",
+        "state": "CA",
+        "id": 2
+      },
+      "amount": 1020,
+      "createdAt": "2016-11-21T17:35:47.302Z",
+      "reason": "just because",
+      "id": 18
+    },
+    {
+      "fromId": 4,
+      "toId": 3,
+      "from": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "to": {
+        "username": "yellyT",
+        "avatar": "https://api.adorable.io/avatars/250/happy",
+        "city": "NY",
+        "state": "NY",
+        "id": 3
+      },
+      "amount": 110,
+      "createdAt": "2016-11-21T17:35:47.304Z",
+      "reason": "Never had a Tesla pick me up as an Uber",
+      "id": 19
+    },
+    {
+      "fromId": 1,
+      "toId": 3,
+      "from": {
+        "username": "GinaZaz",
+        "avatar": "https://api.adorable.io/avatars/250/yo",
+        "city": "Atlanta",
+        "state": "GA",
+        "id": 1
+      },
+      "to": {
+        "username": "yellyT",
+        "avatar": "https://api.adorable.io/avatars/250/happy",
+        "city": "NY",
+        "state": "NY",
+        "id": 3
+      },
+      "amount": 1010,
+      "createdAt": "2016-11-21T17:35:47.305Z",
+      "reason": "I can't beleive I lost that bet, here ya go",
+      "id": 20
+    },
+    {
+      "fromId": 1,
+      "toId": 3,
+      "from": {
+        "username": "GinaZaz",
+        "avatar": "https://api.adorable.io/avatars/250/yo",
+        "city": "Atlanta",
+        "state": "GA",
+        "id": 1
+      },
+      "to": {
+        "username": "yellyT",
+        "avatar": "https://api.adorable.io/avatars/250/happy",
+        "city": "NY",
+        "state": "NY",
+        "id": 3
+      },
+      "amount": 144,
+      "createdAt": "2016-11-21T17:35:47.307Z",
+      "reason": "my share for the rent..",
+      "id": 21
+    },
+    {
+      "fromId": 2,
+      "toId": 4,
+      "from": {
+        "username": "TyDolla",
+        "avatar": "https://api.adorable.io/avatars/250/mean",
+        "city": "LA",
+        "state": "CA",
+        "id": 2
+      },
+      "to": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "amount": 70,
+      "createdAt": "2016-11-21T17:35:47.310Z",
+      "reason": "I can't beleive I lost that bet, here ya go",
+      "id": 22
+    },
+    {
+      "fromId": 2,
+      "toId": 3,
+      "from": {
+        "username": "TyDolla",
+        "avatar": "https://api.adorable.io/avatars/250/mean",
+        "city": "LA",
+        "state": "CA",
+        "id": 2
+      },
+      "to": {
+        "username": "yellyT",
+        "avatar": "https://api.adorable.io/avatars/250/happy",
+        "city": "NY",
+        "state": "NY",
+        "id": 3
+      },
+      "amount": 1083,
+      "createdAt": "2016-11-21T17:35:47.312Z",
+      "reason": "Don't forget to get the right size this time!",
+      "id": 23
+    },
+    {
+      "fromId": 2,
+      "toId": 1,
+      "from": {
+        "username": "TyDolla",
+        "avatar": "https://api.adorable.io/avatars/250/mean",
+        "city": "LA",
+        "state": "CA",
+        "id": 2
+      },
+      "to": {
+        "username": "GinaZaz",
+        "avatar": "https://api.adorable.io/avatars/250/yo",
+        "city": "Atlanta",
+        "state": "GA",
+        "id": 1
+      },
+      "amount": 441,
+      "createdAt": "2016-11-21T17:35:47.314Z",
+      "reason": "just returning the favor",
+      "id": 24
+    },
+    {
+      "fromId": 2,
+      "toId": 4,
+      "from": {
+        "username": "TyDolla",
+        "avatar": "https://api.adorable.io/avatars/250/mean",
+        "city": "LA",
+        "state": "CA",
+        "id": 2
+      },
+      "to": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "amount": 1226,
+      "createdAt": "2016-11-21T17:35:47.315Z",
+      "reason": "Don't forget to get the right size this time!",
+      "id": 25
+    },
+    {
+      "fromId": 4,
+      "toId": 3,
+      "from": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "to": {
+        "username": "yellyT",
+        "avatar": "https://api.adorable.io/avatars/250/happy",
+        "city": "NY",
+        "state": "NY",
+        "id": 3
+      },
+      "amount": 980,
+      "createdAt": "2016-11-21T17:35:47.317Z",
+      "reason": "Don't forget to get the right size this time!",
+      "id": 26
+    },
+    {
+      "fromId": 4,
+      "toId": 2,
+      "from": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "to": {
+        "username": "TyDolla",
+        "avatar": "https://api.adorable.io/avatars/250/mean",
+        "city": "LA",
+        "state": "CA",
+        "id": 2
+      },
+      "amount": 541,
+      "createdAt": "2016-11-21T17:35:47.319Z",
+      "reason": "just because",
+      "id": 27
+    },
+    {
+      "fromId": 4,
+      "toId": 3,
+      "from": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "to": {
+        "username": "yellyT",
+        "avatar": "https://api.adorable.io/avatars/250/happy",
+        "city": "NY",
+        "state": "NY",
+        "id": 3
+      },
+      "amount": 322,
+      "createdAt": "2016-11-21T17:35:47.321Z",
+      "reason": "just returning the favor",
+      "id": 28
+    },
+    {
+      "fromId": 4,
+      "toId": 3,
+      "from": {
+        "username": "tj_hustle",
+        "avatar": "https://api.adorable.io/avatars/250/extra",
+        "city": "Chicago",
+        "state": "IL",
+        "id": 4
+      },
+      "to": {
+        "username": "yellyT",
+        "avatar": "https://api.adorable.io/avatars/250/happy",
+        "city": "NY",
+        "state": "NY",
+        "id": 3
+      },
+      "amount": 1252,
+      "createdAt": "2016-11-21T17:35:47.323Z",
+      "reason": "Don't forget to get the right size this time!",
+      "id": 29
+    },
+    {
+      "fromId": 3,
+      "toId": 2,
+      "from": {
+        "username": "yellyT",
+        "avatar": "https://api.adorable.io/avatars/250/happy",
+        "city": "NY",
+        "state": "NY",
+        "id": 3
+      },
+      "to": {
+        "username": "TyDolla",
+        "avatar": "https://api.adorable.io/avatars/250/mean",
+        "city": "LA",
+        "state": "CA",
+        "id": 2
+      },
+      "amount": 1263,
+      "createdAt": "2016-11-21T17:35:47.325Z",
+      "reason": "For the foods the other day",
+      "id": 30
+    }
+  ]
 }
