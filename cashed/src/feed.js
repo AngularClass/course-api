@@ -1,4 +1,4 @@
-const random = require('lodash')
+const random = require('lodash/random')
 
 const getUser = function(db, notThisUser = 000000) {
   const size = db.get('users').size().value()
@@ -37,7 +37,8 @@ const getUser = function(db, notThisUser = 000000) {
     .filter(user => user.id !== notThisUser)
     .filter(user => !user.admin)
     .value()
-
+  
+  
   return users[random(0, users.length - 1)]
 }
 
