@@ -87,12 +87,23 @@ module.exports = {
   seed(db) {
     db.set('users', []).value()
     db.set('payments', []).value()
-
+    
     Array(30).fill(1)
     .forEach(() => {
       const user = getUser(db)
       const user2 = getUser(db, user.id)
       createTransaction(db, user, user2)
+    })
+
+    db.set('me', {
+      username: 'ItsMe',
+      avatar: 'https://api.adorable.io/avatars/250/me',
+      city: 'Dallas',
+      state: 'TX',
+      current_amount: 0,
+      credit_cards: [],
+      default_card: {},
+      password: ''
     })
     console.log('seeded DB')
   }
