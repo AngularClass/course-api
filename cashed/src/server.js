@@ -18,7 +18,7 @@ app.use((req, res, next)=> {
 app.use('/api', jsonRouter)
 
 io.on('connection', socket => {
-  createFeed({}, jsonRouter.db)
+  createFeed(socket, jsonRouter.db)
 })
 
 module.exports = server
