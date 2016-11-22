@@ -104,7 +104,7 @@ module.exports = {
       credit_cards: [],
       default_card: {},
       password: ''
-    })
+    }).value()
     console.log('seeded DB')
   }
 }
